@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+}
+
+.ad-slot {
+  width: 100%;
+  min-height: 90px;
+  margin: 0 0 22px;
+  border: 1px dashed #4b5563;
+  border-radius: 12px;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 12px;
+  overflow: hidden;
+}
+.ad-slot .ad-placeholder {
+  text-align: center;
+  padding: 12px;
+}
+@media (max-width: 600px) {
+  .ad-slot { min-height: 60px; }
+}
+
+.app { width: min(1100px, 96vw); padding: 28px 0; }
+h1 { margin: 0 0 8px; font-size: 28px; }
+.sub { color:#9ca3af; margin-bottom:22px; }
+.layout {
+  display:grid;
+  grid-template-columns: 1fr 320px;
+  gap: 22px;
+  align-items:start;
+}
+.editor {
+  background:#1f2937;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 35px rgba(0,0,0,.25);
+}
+.canvas-wrap {
+  background:#0b0f17;
+  border-radius:12px;
+  padding:14px;
+  display:flex;
+  justify-content:center;
+  overflow:auto;
+}
+canvas {
+  max-width:100%;
+  height:auto;
+  background:white;
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
+  cursor:grab;
+}
+canvas.dragging { cursor:grabbing; }
+.panel {
+  background:#1f2937;
+  border-radius:16px;
+  padding:20px;
+}
+label { display:block; margin:15px 0 7px; font-weight:600; }
+input[type=file] {
+  width:100%;
+  padding:10px;
+  background:#111827;
+  border:1px solid #374151;
+  border-radius:9px;
+  color:#ddd;
+}
+input[type=range] { width:100%; }
+.value { float:right; color:#9ca3af; font-weight:normal; }
+.buttons { display:grid; gap:10px; margin-top:20px; }
+button {
+  border:0; border-radius:9px; padding:12px 14px;
+  font-size:15px; font-weight:700; cursor:pointer;
+}
+.primary { background:#2563eb; color:white; }
+.secondary { background:#374151; color:white; }
+.danger { background:#7f1d1d; color:white; }
+.hint {
+  margin-top:16px; padding:12px; border-radius:9px;
+  background:#111827; color:#9ca3af; font-size:13px; line-height:1.5;
+}
+@media (max-width: 800px) {
+  .layout { grid-template-columns:1fr; }
+}

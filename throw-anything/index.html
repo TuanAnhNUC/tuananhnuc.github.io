@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- AdSense script will go here after your site is approved by Google. -->
+<link rel="stylesheet" href="style.css">
+<title>Ghép ảnh</title>
+
+</head>
+<body>
+<div class="app">
+
+  <div class="ad-slot" id="top-ad">
+    <div class="ad-placeholder">
+      <strong>QUẢNG CÁO</strong><br>
+      <!--
+        Google AdSense:
+        Sau khi website được AdSense phê duyệt, đặt mã quảng cáo
+        do Google cung cấp vào đây.
+      -->
+      Vị trí quảng cáo 728×90
+    </div>
+  </div>
+  <h1>Ghép ảnh</h1>
+  <div class="sub">Tải một ảnh lên, kéo/thay đổi kích thước để ghép với ảnh nền.</div>
+
+  <div class="layout">
+    <div class="editor">
+      <div class="canvas-wrap">
+        <canvas id="canvas" width="708" height="1260"></canvas>
+      </div>
+    </div>
+
+    <div class="panel">
+      <label>Ảnh muốn ghép</label>
+      <input id="upload" type="file" accept="image/*">
+
+      <label>Kích thước <span class="value" id="scaleVal">100%</span></label>
+      <input id="scale" type="range" min="10" max="300" value="100">
+
+      <label>X <span class="value" id="xVal">0</span></label>
+      <input id="x" type="range" min="-354" max="354" value="0">
+
+      <label>Y <span class="value" id="yVal">0</span></label>
+      <input id="y" type="range" min="-630" max="630" value="0">
+
+      <label>Độ trong suốt <span class="value" id="opacityVal">100%</span></label>
+      <input id="opacity" type="range" min="0" max="100" value="100">
+
+      <label>Xoay <span class="value" id="rotateVal">0°</span></label>
+      <input id="rotate" type="range" min="-180" max="180" value="0">
+
+      <div class="buttons">
+        <button class="primary" id="download">Tải ảnh đã ghép</button>
+        <button class="secondary" id="reset">Đặt lại ảnh ghép</button>
+        <button class="danger" id="remove">Xóa ảnh đã tải</button>
+      </div>
+
+      <div class="hint">
+        <b>Cách dùng:</b><br>
+        1. Chọn ảnh từ máy.<br>
+        2. Kéo trực tiếp ảnh trên canvas để di chuyển.<br>
+        3. Dùng các thanh điều khiển để chỉnh kích thước, vị trí, xoay và độ trong suốt.<br>
+        4. Bấm “Tải ảnh đã ghép” để xuất PNG.
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot" id="bottom-ad">
+    <div class="ad-placeholder">
+      <strong>QUẢNG CÁO</strong><br>
+      Vị trí quảng cáo
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
